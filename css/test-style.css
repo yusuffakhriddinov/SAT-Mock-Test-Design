@@ -1,0 +1,306 @@
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../fonts/pretendard/public/variable/PretendardVariable.ttf');
+}
+
+html, body{
+    margin:0;
+    padding:0;
+    font-family: Pretendard;
+    
+    color: rgb(32, 32, 32);
+}
+.total{
+    padding-left:60px;
+    padding-right:60px;
+    margin-top:0;
+}
+
+/* Top Part */
+.top{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-top-color: rgb(228, 228, 228);
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-left-color: rgb(228, 228, 228);
+    border-left-style: solid;
+    border-left-width: 2px;
+    border-right-color: rgb(228, 228, 228);
+    border-right-style: solid;
+    border-right-width: 2px;
+    border-bottom-color: rgb(228, 228, 228);
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    margin-top:0;
+    padding-top:25px;
+    height:65px;
+    padding-left:30px;
+    padding-right: 24px;
+    border-bottom-left-radius: 36px;
+    border-bottom-right-radius: 36px;
+}
+.top-text{
+    margin:0;
+}
+.top-text p{
+    font-size: 18px;
+    margin:0;
+    font-weight: 600;
+    line-height:21px;
+    margin-bottom: 5px;
+    
+}
+.top-text button{
+    margin:0;
+    font-size: 14px;
+    border: none;
+    background-color: transparent;
+    padding:0;
+    cursor: pointer;
+}
+
+.timer{
+    text-align: center;
+    margin:0;
+}
+.timer p{
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 20px;
+    margin:0; 
+    margin-bottom: 5px;
+}
+.timer button{
+    background-color: transparent;
+    border: 1px solid black;
+    padding-left:16px;
+    padding-right:16px;
+    border-radius:20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid black;
+}
+
+
+.save-and-exit{
+    text-align: right;
+    margin:0;
+}
+.save-and-exit p{
+    margin:0;
+}
+.save-and-exit button{
+    background-color:transparent;
+    padding-left:35px;
+    padding-right:35px;
+    padding-top:10px;
+    padding-bottom:10px;
+    border-radius:35px;
+    margin-top:5px;
+    font-size: 16.5px;
+    font-weight:bold;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.save-and-exit button:hover{
+    background-color:black;
+    color: white;
+}
+
+/* Container Part */
+
+.container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top:40px;
+}
+.question-part{
+    height:485px;
+    border-right: 1px solid rgb(211, 211, 211);;
+}
+.question-part p{
+    margin:0;
+    font-size: 18px;
+    line-height: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.multiple-choice-part{
+    height:485px;
+    padding-left:40px;
+    padding-right:30px;
+}
+.multiple-choice-part .bar{
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    background-color: rgb(245, 245, 248);
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    align-items: center;
+    
+}
+
+.multiple-choice-part .bar .number{
+    padding-top:12px;
+    padding-bottom:12px;
+    padding-left:20px;
+    padding-right:20px;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    font-size:20px;
+    background-color: rgb(32, 32, 32);
+    color:white;
+    font-weight:bold;  
+}
+.multiple-choice-part .bar img{
+    width:20px;
+    cursor: pointer;
+}
+
+.multiple-choice-part .bar .mark{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    text-align: left;
+    padding-top:12px;
+    padding-bottom:12px;
+    padding-left:20px;
+    font-size:18px;   
+    font-weight: 500;
+    align-items: center;
+}
+
+.multiple-choice-part .question{
+    margin-top:20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    line-height: 25px;
+
+}
+
+/* Option part of Multiple choice Part */
+
+.question {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.options {
+    list-style-type: none;
+    padding: 0;
+    
+  }
+  .options li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .option-input {
+    display: none;
+  }
+  .option-label {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    font-size:16px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  .option-letter {
+    font-family: Pretendard;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(128, 128, 128, 0.2);
+    font-weight:600;
+    transition: background-color 0.3s, border-color 0.3s;
+
+  }
+  .option-input:checked + .option-label {
+    border: 2px solid rgb(50, 61, 214);
+    box-shadow: 0 0 8px rgb(214, 216, 255);
+    
+  }
+  .option-input:checked + .option-label .option-letter {
+    background-color: rgb(50, 61, 214);
+    color: white;
+    
+  }
+
+
+  /* Footer Part */
+  .footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top:10px;
+    border-top: 2px solid rgb(228, 228, 228);
+    padding-top:5px;
+    padding-left:100px;
+    padding-right:100px;
+    align-items: center;
+    
+  }
+  
+  .footer .dsat{
+    margin-top:10px;
+    text-align:left;
+    font-size:18px;
+    font-weight: bold;
+  }
+
+  .footer .question-tracker{
+    margin-top:10px;
+    text-align:center;
+  }
+  .footer .question-tracker button{
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:20px;
+    padding-right:20px;
+    font-size:16px;
+    font-weight:bold;
+    background-color: transparent;
+    border: 2px solid rgb(228, 228, 228);
+    border-radius:30px;
+    cursor: pointer;
+  }
+
+  .footer .next-button{
+    margin-top:10px;
+    text-align:right;
+  }
+  .footer .next-button button{
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:30px;
+    padding-right:20px;
+    border:none;
+    font-size:18px;
+    font-weight:bold;
+    border-radius: 35px;
+    background-color: rgb(50, 61, 214);
+    color:white;
+    cursor:pointer;
+  }
+  .footer .next-button button:after {
+    content: '\232A '; 
+    margin-left:10px;
+    color: white;
+    
+  }
+
+
+
+

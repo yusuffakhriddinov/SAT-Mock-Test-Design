@@ -1,0 +1,363 @@
+@font-face {
+    font-family: 'Inter-Medium';
+    src: url('../fonts/inter/Inter-Light-BETA.otf');
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter/Inter-Regular.otf');
+}
+
+
+body{
+    font-family: Inter;
+    margin: 0;
+}
+
+.header{
+    display: flex;
+    position:fixed;
+    left:0;
+    right:0;
+    background-color: white;
+    align-items: center;
+    text-align: center;
+    padding-top:10px;
+    padding-bottom: 10px;
+    height:50px;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.2);
+    z-index: 1;
+}
+.logo{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: end; /* Center vertically */
+    flex:1;
+    gap:10px;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.logo img{
+    margin-right: -5px;
+    width:35px;
+}
+.links{
+    flex:0.5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.one{
+    cursor: pointer;
+}
+.one:hover{
+    color:rgb(30, 41, 192);
+}
+.register{
+    flex: 1;
+    text-align: center;
+}
+.register div{
+    display: inline-block;
+    margin-right:30px;
+}
+.register button{
+    padding-top:12px;
+    padding-bottom:12px;
+    padding-left:16px;
+    padding-right:16px;
+    font-size:16px;
+    border-radius: 12px;
+    border:none;
+    background-color: rgb(50, 61, 214);
+    color:white;
+    opacity: 0.94;
+    cursor: pointer;
+}
+.register button:hover{
+    opacity: 0.98;
+}
+.register button:active{
+    opacity: 1;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:500px;
+    align-items: center;
+    text-align: center;
+    margin-bottom:100px;
+    
+}
+.container .mid-part{
+    display: inline-block;
+    color: rgb(24, 24, 27);
+    font-weight:400;
+    font-size: 65px;
+    font-family: Inter;
+    font-weight: 600;
+    margin-top: 150px;
+}
+.container .mid-part ol{
+    padding:0;
+    margin:0;
+    text-align: start;
+    margin-left:100px;
+    list-style: none;
+    height: 6.2rem;
+    line-height: 6.2rem;
+    
+    
+    overflow:hidden;
+
+    
+    white-space:nowrap;
+    
+    animation:  typing 2.5s steps(50) infinite alternate;
+    
+    
+}
+.container .mid-part ol li{
+    animation: slide 15s  steps(3) infinite;
+  }
+
+.container .mid-part ol li span{
+    border-right: 0.4rem solid #fff;
+    white-space:nowrap;
+    animation: cursor .8s step-end infinite;
+    padding-right:5px;
+    
+    
+}
+  @keyframes slide{
+    100%{
+      transform: translateY(-300%);
+    }
+    
+  }
+  @keyframes cursor{
+    50%{ border-color: black; }
+  }
+  @keyframes typing{
+    0%, 10%{ 
+      width:0%; 
+    }
+    70%, 100%{
+      width:100%;
+    }
+
+  }
+.container p{
+    color: rgb(82, 82, 91);
+    width:600px;
+    font-size: 22px;
+    margin-bottom:30px;
+    margin-top:30px;
+    font-family: Inter-Medium;
+}
+.container button{
+    padding-top:16px;
+    padding-bottom:16px;
+    padding-left:22px;
+    padding-right:22px;
+    font-size:22px;
+    border-radius: 12px;
+    border:1px solid rgb(50, 61, 214);
+    background-color: rgb(50, 61, 214);
+    color:white;
+    box-shadow: 0 0 1px gray;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+.container button span{
+    font-size: 18px;
+    opacity: 0.8;
+    font-family: Inter-Medium;
+}
+.container button:hover{
+    background-color: rgb(30, 41, 192);
+}
+.container button:active{
+    background-color: rgb(14, 24, 157);
+}
+
+/* Features */
+.features{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:50px;
+    height:800px;
+    margin-bottom:30px;
+    text-align: center;
+}
+.feauture-1{
+    height: 400px;
+    width:500px;
+}
+.feauture-1 img{
+    border-radius: 25px;
+    height: 400px;
+    width:500px;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 0.15s;
+}
+.feauture-1 img:hover{
+    opacity: 0.8;
+}
+.feauture-2{
+    height: 400px;
+    width:500px;
+}
+.feauture-2 img{
+    border-radius: 25px;
+    height: 400px;
+    width:500px;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 0.15s;
+}
+.feauture-2 img:hover{
+    opacity: 0.8;
+}
+
+
+/* Tests Part */
+
+.module{
+    display: inline-block;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+    
+}
+
+/* Info Part */
+
+.module .info{
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-top:30px;
+}
+.module .info h2{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom:10px;
+    color: rgb(50, 61, 214);
+
+}
+.module .info hr{
+    background-color: #323dd6;
+    width:100%;
+    height:5px;
+    margin-top:0;
+    margin-bottom: 10px;
+    border: none;
+}
+.module .info p{
+    color: rgb(83, 83, 83);
+    margin-top:0;
+    margin-bottom: 0;
+}
+
+/* Tests Part */
+
+.module .tests{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:50px;
+    padding-left:100px;
+    padding-right:100px;
+
+}
+.module .tests div{
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-radius: 14px;
+    padding:20px;
+    width:500px;
+    text-align: start;
+    box-shadow: 0 0 5px rgba(128, 128, 128, 0.2);
+}
+.module .tests .free{
+    background-color: white;
+    color: rgb(51, 51, 51);
+}
+.module .tests .buy{
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+.module .tests div .test-title{
+    font-size: 24px;
+    font-weight: 600;
+    margin:0;
+}
+.module .tests div .finance-status{
+    display:inline-block;
+    margin-top:15px;
+    margin-bottom:30px;
+    width: 50px;
+    text-align: center;
+    padding-top:2px;
+    padding-bottom: 2px;
+    padding-left:8px;
+    padding-right:8px;
+    border:none;
+    border-radius: 12px;
+    font-size: 14px;
+}
+.module .tests .free .finance-status{
+    background-color: rgb(55, 170, 100);
+    color:white;
+}
+.module .tests .buy .finance-status{
+    background-color: white;
+    color: #333333;
+}
+
+.module .tests div button{
+    width:120px;
+    padding-top:15px;
+    padding-bottom:15px;
+    font-size: 17px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    margin-left: 75%;
+    cursor: pointer;
+}
+.module .tests .free button{
+    color:white;
+    background-color: rgb(50, 61, 214);
+}
+.module .tests .buy button{
+    color:rgb(51, 51, 51);
+    background-color: #FFDD2D;
+}
+.announcement{
+    width:74%;
+    background-color:white;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:30px;
+    padding-right:30px;
+    text-align: start;
+    border-radius: 20px;
+    margin-bottom:40px;
+    
+}
+.announcement h1{
+    font-size: 16px;
+    margin:0;
+    margin-bottom:10px;
+}
+.announcement p{
+    margin:0;
+    font-size:14px;
+    color:gray;
+}
